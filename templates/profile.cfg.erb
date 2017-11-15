@@ -1,0 +1,18 @@
+create -b
+set brand=solaris
+set zonepath=/zones/<%= state[:zone_name] %>
+set autoboot=false
+set autoshutdown=shutdown
+set ip-type=exclusive
+add anet
+set linkname=net0
+set lower-link=stub0
+set configure-allowed-address=true
+set link-protection=mac-nospoof
+set mac-address=auto
+end
+add attr
+set name=comment
+set type=string
+set value="<%= "Created by #{Etc.getlogin || 'unknown'} on #{Socket.gethostname} at #{Time.now}" %>"
+end

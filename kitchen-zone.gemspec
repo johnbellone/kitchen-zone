@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.version = Kitchen::Driver::ZONE_VERSION
   spec.authors = ['Noah Kantrowitz']
   spec.email = %w{noah@coderanger.net}
-  spec.description = 'A Test-Kitchen driver using Solaris zones.'
+  spec.description = 'A Test-Kitchen driver for using Solaris zones.'
   spec.summary = spec.description
   spec.homepage = 'https://github.com/poise/kitchen-zone'
   spec.license = 'Apache 2.0'
@@ -35,5 +35,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'test-kitchen' # TODO Version
   spec.add_dependency 'net-ssh' # Only used directly for RSA#to_blob.
-  spec.add_dependency 'airlift'
+  spec.add_dependency 'train', '~> 0.22'
 end
